@@ -24,16 +24,16 @@ var calculate_click = function ()
         }
     }
     else{
-        if (floatTotalPts <= 100 && floatTotalPts > 89){
+        if (floatTotalPts <= 100 && floatTotalPts >= 90){
             stringFinalGrade = "A";
         }
-        else if (floatTotalPts <= 89 && floatTotalPts > 79){
+        else if (floatTotalPts <= 89 && floatTotalPts >= 80){
             stringFinalGrade = "B";
         }
-        else if (floatTotalPts <= 79 && floatTotalPts > 69){
+        else if (floatTotalPts <= 79 && floatTotalPts >= 70){
             stringFinalGrade = "C";
         }
-        else if (floatTotalPts <= 69 && floatTotalPts > 59){
+        else if (floatTotalPts <= 69 && floatTotalPts >= 60
             stringFinalGrade = "D";
         }
         else{
