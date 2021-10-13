@@ -27,13 +27,13 @@ var calculate_click = function ()
         if (floatTotalPts <= 100 && floatTotalPts >= 90){
             stringFinalGrade = "A";
         }
-        else if (floatTotalPts <= 89 && floatTotalPts >= 80){
+        else if (floatTotalPts < 90 && floatTotalPts >= 80){
             stringFinalGrade = "B";
         }
-        else if (floatTotalPts <= 79 && floatTotalPts >= 70){
+        else if (floatTotalPts < 80 && floatTotalPts >= 70){
             stringFinalGrade = "C";
         }
-        else if (floatTotalPts <= 69 && floatTotalPts >= 60
+        else if (floatTotalPts < 70 && floatTotalPts >= 60) {
             stringFinalGrade = "D";
         }
         else{
