@@ -22,7 +22,7 @@ while (intMin < 0 || isNaN(intMin)) {
  * number is at least 2 more than the minimum (so that there is some guessing involved).
 */
 
-intMax = parseInt(prompt("Choose the highest number in your guessing range:\nNote: your highest number must be at least 2 more than 0 "));
+intMax = parseInt(prompt("Choose the highest number in your guessing range:\nNote: your highest number must be at least 2 more than " + intMin));
 
 while (intMax < intMin + 2 || isNaN(intMax)) {
     intMax = parseInt(prompt("Invalid upper bound.\nPlease enter an upper bound for your guessing range that is at least 2 above " + intMin +" : "));
