@@ -15,26 +15,26 @@ var passwordCheckOld = function ()
     
     stringOutput = ""; //initializes stringOutput with no characters
 
-    while (stringPassword.length < 8) { //when the length of the password entered is less than 8 characters the loop is entered
+    if (stringPassword.length < 8) { //when the length of the password entered is less than 8 characters the loop is entered
         stringOutput = "Invalid password length \nPlease enter a new password with at least 8 characters"; // sets the return message to an error message
         $("output").value = stringOutput; //sets the html output value equal to string output's value
-        break; //exits the function
-    } 
-    
-    for (i = 0; i < arrayBadPasswords.length; i++) { //this loop runs through the list of names in the array
-        if (stringPassword === arrayBadPasswords[i]) { //when the password entered matches a name in the array of bad passwords, the statement is entered
-            stringOutput = "Your password is easily guessable"; //sets the return message to show a warning
-            $("output").value = stringOutput; //sets the html output value equal to string output's value
-            break; //exits the function
-        }
+    }
+    else {
+      for (i = 0; i < arrayBadPasswords.length; i++) { //this loop runs through the list of names in the array
+          if (stringPassword === arrayBadPasswords[i]) { //when the password entered matches a name in the array of bad passwords, the statement is entered
+              stringOutput = "Your password is easily guessable"; //sets the return message to show a warning
+              $("output").value = stringOutput; //sets the html output value equal to string output's value
+              break; //exits the function
+          }
+      }
+      
+      if (stringOutput === "") { //when the password entered is not found in the array, thus stringOutput is still null, the loop is entered
+          stringOutput = "Password accepted"; //sets the return message to give you a warm pat on the back
+          $("output").value = stringOutput; //sets the html output value equal to string output's value
+      }
     }
     
-    if (stringOutput === "") { //when the password entered is not found in the array, thus stringOutput is still null, the loop is entered
-        stringOutput = "Password accepted"; //sets the return message to give you a warm pat on the back
-        $("output").value = stringOutput; //sets the html output value equal to string output's value
-    }
-    
-    //function exits if not having so before     
+    //function exits if not having so before      
 };
 
 window.onload = function () 
