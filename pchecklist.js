@@ -26,13 +26,11 @@ var passwordCheckOld = function ()
               $("output").value = stringOutput; //sets the html output value equal to string output's value
               break; //exits the function
           }
-      }
-      
-      if (stringOutput === "") { //when the password entered is not found in the array, thus stringOutput is still null, the loop is entered
+          if (stringOutput === "") { //when the password entered is not found in the array, thus stringOutput is still null, the loop is entered
           stringOutput = "Password accepted"; //sets the return message to give you a warm pat on the back
           $("output").value = stringOutput; //sets the html output value equal to string output's value
+          }
       }
-    }
     
     //function exits if not having so before      
 };
